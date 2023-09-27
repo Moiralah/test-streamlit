@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 # In[6]:
 
 
-df = pd.read_excel(r"C:\Users\Acer\Desktop\Python Learn\owid-covid-data ASEAN 1.xlsx")
+df = pd.read_csv(r"https://github.com/Moiralah/test-streamlit/blob/main/owid-covid-data%20ASEAN%201.csv")
 df
 
 

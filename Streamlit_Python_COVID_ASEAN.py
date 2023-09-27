@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data from the provided URL
-url = "https://raw.githubusercontent.com/Moiralah/blob/main/owid-covid-data%20ASEAN%201.csv"
+url = "https://raw.githubusercontent.com/Moiralah/test-streamlit/main/owid-covid-data%20ASEAN%201.csv"
 df = pd.read_csv(url)
 
 # Set option to display float values with two decimal places

@@ -1,69 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 
-
-# In[6]:
-
+# Load the data from the provided URL
 url = "https://raw.githubusercontent.com/Moiralah/blob/main/owid-covid-data%20ASEAN%201.csv"
 df = pd.read_csv(url)
-df
 
-# In[9]:
+# Set option to display float values with two decimal places
+pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
-
-pd.set_option('display.float_format',lambda x: '%.2f' % x)
-
-
-# In[21]:
-
-
+# Fill NaN values with 0
 df.fillna(0, inplace=True)
-
-
-# In[22]:
-
-
-df.info()
-
-
-# In[23]:
-
-
-df.describe()
-
-
-# In[24]:
-
-
-df.nunique()
-
-
-# In[25]:
-
-
-df.corr()
-
-
-# In[29]:
-
-
-df.groupby('location').mean()
-
-
-# In[33]:
-
-
-df['new_cases'].plot()
-
-
-# In[4]:
-
 
 # Create a Streamlit app title
 st.title("COVID-19 ASEAN 2020-2022 Data Analysis")
@@ -113,6 +60,3 @@ st.write(f"Population Density for {selected_location}: {filtered_df['population_
 # Display data table for the selected location
 st.write("Data for the selected location:")
 st.write(filtered_df)
-
-
-

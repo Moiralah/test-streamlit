@@ -11,7 +11,7 @@ import pandas as pd
 # In[6]:
 
 
-df = pd.read_csv(https://raw.githubusercontent.com/Moiralah/blob/main/owid-covid-data%20ASEAN%201.csv)
+df = pd.read_csv("https://raw.githubusercontent.com/Moiralah/blob/main/owid-covid-data%20ASEAN%201.csv")
 df
 
 

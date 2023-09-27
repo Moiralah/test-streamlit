@@ -6,7 +6,6 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 # In[6]:
@@ -64,25 +63,6 @@ df.groupby('location').mean()
 df['new_cases'].plot()
 
 
-# In[35]:
-
-
-# Group by "location" and "year," and sum the "new_cases"
-grouped_data = df.groupby(['location', 'date'])['new_cases'].sum().reset_index()
-
-# Plot the data
-plt.figure(figsize=(12, 6))  # Adjust the figure size if needed
-for location, data in grouped_data.groupby('location'):
-    plt.plot(data['date'], data['new_cases'], label=location)
-
-plt.xlabel('Year')
-plt.ylabel('Total New Cases')
-plt.title('Total New Cases by Year (Grouped by Location)')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-
 # In[4]:
 
 
@@ -134,10 +114,6 @@ st.write(f"Population Density for {selected_location}: {filtered_df['population_
 # Display data table for the selected location
 st.write("Data for the selected location:")
 st.write(filtered_df)
-
-
-# In[ ]:
-
 
 
 
